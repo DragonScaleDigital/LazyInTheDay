@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+
+
+    <title>Lazy In The Day | Home</title>
+
+    <!-- Font -->
+    <link href='http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="/semantic/dist/semantic.min.css">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/assets/sweetalert/sweetalert.css">
+
+    <!-- Scripts. Loading first to keep functionality viable. -->
+    <script src="/assets/jquery/jquery.js"></script>
+    <script src="/assets/typedjs/js/typed.js"></script>
+    <script src="/assets/angular/angular.js"></script>
+    <script src="/assets/sweetalert/sweetalert-dev.js"></script>
+
+    <!-- Semantic UI JS -->
+    <script src="/semantic/dist/semantic.js"></script>
+
+
+    <!-- Ready the webpage elements -->
+    <script src="/js/main.js"></script>
+    <script src="/js/home.js"></script>
+    <script src="/js/sidebar.js"></script>
+</head>
+<body>
+<!-- Sidebar, We are doing a rework of the navigation bar for this demo -->
+<div class="ui inverted labeled icon left inline vertical sidebar menu">
+    <a href="#home" class="active item">
+        <i class="home icon"></i>
+        Home
+    </a>
+
+    <a href="#about" class="item">
+        <i class="question icon"></i>
+        About
+    </a>
+    <a href="#contact" class="item">
+        <i class="comment icon"></i>
+        Contact Us
+    </a>
+</div>
+
+<!--
+    Because we are using a fixed navigation method.
+    We need to declare it outside the pusher since the 'fixed' class will handle the rest.
+-->
+<div class="ui large fixed inverted menu">
+    <div class="ui container">
+        <a class="item" onclick="toggleSidebar()">
+            <i class="content icon"></i>
+            Menu
+        </a>
+
+        <div class="right menu">
+            <a class="item">MC 1.7.10</a>
+        </div>
+    </div>
+</div>
+<a id="home"></a><!-- Home Screen Anchor
+
+<!-- Sidebar Pusher -->
+<div class="pusher">
+    <!--
+        This is absolutely needed around ALL! contents that will be pushed.
+        Period. (Full Stop :P)
+        It can be placed around each one individually, However, A global push isn't bad either.
+        Which is what I've done here. All non-sidebar content is enveloped in this tag.
+        (Not needed for modals, but I'll discuss that if we add them to the page)
+    -->
+
+
+    <div class="ui jumbotron inverted basic segment">
+        <div class="ui header-content container">
+            <div class="ui center aligned basic segment">
+                <h1 class="ui inverted header"><span id="welcome-typed"></span></h1>
+                <h2 class="white">
+                    <em>"lazy in the day, heavy in the night"</em>
+                    <div class="ui divider"></div>
+                    A minecraft server brought to you by Dragonscale Digital
+                </h2>
+                <a id="welcome-arrow-circle" class="ui icon labeled circular button"><i class="down arrow icon"></i> Start</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="page-content">
+        <a id="about"></a><!-- About Anchor -->
+        <div class="ui container">
+            <div id="section-two" class="ui basic center aligned segment">
+                <div class="ui three column center aligned divided relaxed stackable grid container">
+                    <div class="row">
+                        <div class="column">
+                            <div class="ui feature center aligned segment">
+                                <h2 class="ui icon header">
+                                    <div class="ui hidden divider"></div>
+                                    <i class="code icon"></i>
+                                    <div class="ui hidden divider"></div>
+                                    Your Favorite Tech Mods!
+                                </h2>
+                                <p>Automate all the things using: <em>Buildcraft, </br>Thermal Expansion, Mekanism, Applied Energistics</em>.</p>
+                            </div>
+                        </div>
+                        <div class="column">
+                            <div class="ui feature center aligned segment">
+                                <h2 class="ui icon header">
+                                    <div class="ui hidden divider"></div>
+                                    <i class="rocket icon"></i>
+                                    <div class="ui hidden divider"></div>
+                                    Seasonal Mod Additions!
+                                </h2>
+                                <p>We like to plan for the future. Every couple months we will introduce new mods to spice things up.</p>
+                            </div>
+                        </div>
+                        <div class="column">
+                            <div class="ui feature center aligned segment">
+                                <h2 class="ui icon header">
+                                    <div class="ui hidden divider"></div>
+                                    <i class="users icon"></i>
+                                    <div class="ui hidden divider"></div>
+                                    Amazing Community
+                                </h2>
+                                <p>Our Admins & Moderaters are hand picked, We select the best because we know our players deserve nothing less</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div><!-- /page-content -->
+
+    <!-- About Us -->
+    <div class="ui inverted basic segment">
+        <div class="ui container">
+            <div id="section-three" class="ui center aligned inverted segment">
+                <h2 class="white">What is Lazy in The Day?</h2>
+                <div class="ui inverted divider"></div>
+                <div class="ui inverted two column divided grid">
+                    <div class="row">
+                        <div class="column">
+                            <div class="ui feature-mid inverted segment">
+                                <div class="ui hidden divider"></div>
+                                <h2 class="header">A Mature & Developed Community</h2>
+                                <p> Lazy in The Day has overgone some extensive changes in the past.
+                                    We started over 4 years ago as Vetracraft, After the fall of Vetracraft,
+                                    coming back better than ever with Purplecraft. A community that lasted over 2.5 Years.
+                                    <br>
+                                    <br>
+                                    Now we are back after about 9 months of resting, The beast as reawoken. And we are back and better than ever.
+                                    </p>
+                            </div>
+                        </div>
+
+                        <div class="column">
+                            <div class="ui feature-mid inverted segment">
+                                <div class="ui hidden divider"></div>
+                                <h2 class="header">Experienced Staff</h2>
+                                <p> Our staff are not only have over 6 years of Modded & Vanilla Minecraft server administration experience.
+                                    They are also a driven force to be reakoned with. If there is a problem on the server.
+                                    We will go as far as coding a custom mod to fill that gap. When it comes down to it.
+                                    <br>
+                                    <br>
+                                    This server is our pride and joy. And we both take great pride in our work.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div><!-- End grid -->
+            </div>
+        </div>
+    </div>
+
+    <!-- footer -->
+    <div class="footer">
+        <div class="ui conterin">
+            <div class="ui center aligned basic segment">
+                <p>All Rights Reserved ©2015, Dragonscale Digital, lazyintheday.com</p>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

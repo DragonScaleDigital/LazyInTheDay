@@ -1,0 +1,6 @@
+.idea
+node_modules
+img
+semantic/src/*
+semantic/tasks/*
+semantic/gulpfile
